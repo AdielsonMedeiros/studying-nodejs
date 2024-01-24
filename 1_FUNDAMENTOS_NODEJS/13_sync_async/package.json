@@ -1,0 +1,12 @@
+{
+  "name": "13_sync_async",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sincrono.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
