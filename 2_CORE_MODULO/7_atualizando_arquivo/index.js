@@ -25,12 +25,17 @@ const server = http.createServer((req, res) => {
             return res.end()
         })
     } else{
+
+        const nameNewLine =  name + ',\r\n'
+
+
         // Se o parâmetro 'name' estiver presente, escreve o valor em 'arquivo.txt'
-        fs.writeFile("arquivo.txt", name, function(err,data) {
+        fs.appendFile("arquivo.txt", nameNewLine, function(err,data) {
             // Redireciona o usuário para a página inicial
             res.writeHead(302,{
                 location: "/",
             })
+            return res.end()
         })
     }
 })
