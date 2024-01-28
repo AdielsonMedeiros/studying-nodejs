@@ -1,11 +1,11 @@
 // modulos externos
 
 
-
+import chalk from 'chalk'
+import fs from 'fs'
 
 
 // modulos internos
-const fs = require('fs')
 
 operation()
 
@@ -19,7 +19,17 @@ async function operation(){
     },
 ]).then(answer => {
     const action = answer['action']
-    console.log(action)
+    
+    if(action === 'Criar conta'){
+        createAccount()
+    }
 })
 .catch((err)=> console.log(err))
+}
+
+// criar uma conta 
+
+function createAccount(){
+    console.log(chalk.bgGreen.black('Parabéns por escolher esse banco ruim!'))
+    console.log(chalk.green('Defina as opções da sua conta zé mané'))
 }
